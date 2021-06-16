@@ -1,5 +1,6 @@
 radio.onReceivedValue(function (name, value) {
-    led.unplot(0, 0)
     serial.writeValue(name, value)
+    basic.showString(name)
+    basic.showString("" + (value))
 })
 radio.setGroup(20)
